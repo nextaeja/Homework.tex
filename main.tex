@@ -14,9 +14,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{physics}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{siunitx}
+\usepackage{bm}
+\usepackage{float}
 
 
 
+\let\oldvec=\vec
+\renewcommand{\vec}[1]{\oldvec{\mathbf{#1}}}
+\def\doubleunderline#1{\underline{\underline{#1}}}
 
 \def\spvec#1{\left(\vcenter{\halign{\hfil$##$\hfil\cr \spvecA#1;;}}\right)}
 \def\spvecA#1;{\if;#1;\else #1\cr \expandafter \spvecA \fi}
@@ -50,6 +56,16 @@
 \newcommand{\expectation}[1]{\left\langle #1 \right\rangle}
 \newcommand{\brakett}[3]{\left\langle#1\left|#2\right|#3\right\rangle}
 \newcommand{\partialf}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+\newcommand{\lbar}{\left|}
+\newcommand{\rbar}{\right|}
+\renewcommand*{\b}[1]{\mathbf{#1}}
+\def\matrix#1{\underline{\underline{#1}}}
+
+
+
+
+
+
 
 \fancyhf{}% Clear header/footer
 \fancyhead[C]{HOMEWORK TITLE (OR WHATEVER YOU WANT, Its what appears in the header of each page)}
